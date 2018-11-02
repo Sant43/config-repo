@@ -1,0 +1,47 @@
+spring:
+
+  application:
+
+    name: userRepository-consumer-new
+
+      
+
+---
+
+
+
+spring:
+
+  profiles: local
+
+logging:
+
+  file: logs/claimprocessing.log
+
+eureka:
+
+  client:
+
+    serviceUrl:
+
+      defaultZone: http://localhost:8090/eureka/
+
+server:
+
+  port: 8096
+
+
+
+---
+
+
+
+spring:
+
+  profiles: pcf
+
+  cloud:
+
+    services:
+
+      registrationMethod: route
